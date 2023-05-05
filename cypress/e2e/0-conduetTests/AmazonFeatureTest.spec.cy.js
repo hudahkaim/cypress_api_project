@@ -25,15 +25,15 @@ describe("Test category selection of Amazon", () => {
 
             cy.log(productsText)
             expect(productsText).contains("New Apple AirPods Pro (2nd Gen)")
-            
+
         })
-        cy.get("@products").each(($el,index,$list)=>{
+        cy.get("@products").each(($el, index, $list) => {
 
             cy.wrap($el).scrollIntoView()
 
-            cy.log("index "+index+" TEXT "+$el.text())
+            cy.log("index " + index + " TEXT " + $el.text())
 
-            if(index=== 3){
+            if (index === 3) {
                 return false
             }
 
@@ -41,6 +41,7 @@ describe("Test category selection of Amazon", () => {
 
     })
 
+   
 
 
 

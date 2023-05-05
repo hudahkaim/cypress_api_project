@@ -20,6 +20,7 @@ describe("Drag Drop Functinality", () => {
         cy.get("@target").trigger("mousemove", { which: 1 }).trigger("mouseup", { force: true })
 
         cy.get("@target").should("contains.text","Dropped")
+        
 
     })
 })
